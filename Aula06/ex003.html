@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <Style>
+        Body {
+            background-color: rgb(219, 210, 243); /*comentario em css */
+            color: whitesmoke;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(216, 216, 46);
+        }
+    </Style>
+</head>
+<body>
+   <h1>Olá, Mundo!</h1>  <!--Isso é um comentario em HTML-->
+   <p>Já me livrei da maldição.</p>
+   <script>
+      var n1 = Number(window.prompt('digite um número:')) // recebe um valor de string --> tem que converter -> usa o number.parseInt
+      var n2 = Number(window.prompt('digite outro número:')) // recebe um valor de string --> tem que converter
+      var s = n1 + n2
+      window.alert (`A soma entre ${n1} e ${n2} é igual a: ${s}) // concatenação, o js identifica o window.prompt como string, sinal ed mais vira concatenação.
+      
+   </script> 
+</body>
+</html>

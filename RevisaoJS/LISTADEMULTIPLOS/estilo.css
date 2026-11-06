@@ -1,0 +1,209 @@
+/* Cores do projeto: altere aqui para personalizar a página. */
+:root {
+    --fundo: #eef5f5;
+    --cartao: #ffffff;
+    --texto: #17343b;
+    --texto-suave: #526b72;
+    --destaque: #087f75;
+    --destaque-escuro: #06665e;
+    --borda: #cbdcde;
+}
+
+/* Inclui bordas e espaçamento na largura dos elementos. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 48px 20px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--texto);
+    background:
+        radial-gradient(circle at 10% 10%, #d2ede4 0, transparent 40%),
+        radial-gradient(circle at 90% 90%, #dce5f7 0, transparent 40%),
+        var(--fundo);
+}
+
+header {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    text-align: center;
+}
+
+/* Cartão principal. */
+section {
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+    border: 1px solid #ffffff;
+    border-top: 4px solid var(--destaque);
+    border-radius: 24px;
+    background: var(--cartao);
+    box-shadow: 0 20px 60px #17343b14, 0 4px 12px #17343b08;
+    animation: aparecer 450ms ease-out;
+}
+
+#base p {
+    margin: 0;
+}
+
+#base,
+#quantidadeMultiplos {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+#quantidadeMultiplos {
+    margin-top: 20px;
+}
+
+/* Campos de entrada. */
+input[type="number"] {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 8px;
+    padding: 12px 14px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    font: inherit;
+    font-weight: 400;
+    color: var(--texto);
+    background: #f7fafa;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+input[type="number"]:hover {
+    border-color: #829fa5;
+}
+
+/* Destaque ao navegar pelo teclado ou clicar nos campos. */
+input[type="number"]:focus,
+#lista:focus {
+    border-color: var(--destaque);
+    outline: 2px solid var(--destaque);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 5px #087f7510;
+}
+
+/* Botão de ação. */
+input[type="button"] {
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 26px;
+    padding: 13px 18px;
+    border: 0;
+    border-radius: 12px;
+    font: inherit;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #ffffff;
+    background: var(--destaque);
+    box-shadow: 0 6px 16px #087f7526;
+    cursor: pointer;
+    transition: background 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+@media (hover: hover) {
+    input[type="button"]:hover {
+        background: var(--destaque-escuro);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px #087f7530;
+    }
+}
+
+input[type="button"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px #087f7526;
+}
+
+input[type="button"]:focus-visible {
+    outline: 3px solid var(--texto);
+    outline-offset: 4px;
+}
+
+/* Lista preenchida pelo JavaScript. */
+#lista {
+    display: block;
+    width: 100%;
+    height: 216px;
+    margin-top: 24px;
+    padding: 10px;
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 1.05rem;
+    color: var(--texto);
+    background: #f7fafa;
+}
+
+#lista option {
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+#lista option:nth-child(even) {
+    background: #eaf3f1;
+}
+
+#lista option:checked {
+    color: #ffffff;
+    background: var(--destaque);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--texto-suave);
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes para telas pequenas. */
+@media (max-width: 480px) {
+    body {
+        padding: 28px 16px;
+        gap: 20px;
+    }
+
+    section {
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+
+    input[type="number"] {
+        font-size: 1rem;
+    }
+}
+
+/* Respeita a preferência de reduzir movimentos do sistema. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
