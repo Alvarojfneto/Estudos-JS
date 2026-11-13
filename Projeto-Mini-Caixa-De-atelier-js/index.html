@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa de Pedidos - Tai Atelier </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>  Caixa de Pedidos - Tai Atelier  </h1>
+<section> Informe o produto:
+    <select name="produtos" id="produtos">
+    <option value="15"> Chaveiro artesanal - R$ 15,00</option>
+    <option value="35"> Porta-vasos - R$ 35,00</option>
+    <option value="60"> Painel decorativo - R$ 60,00</option>
+</select> 
+<label for="txtquant"> Quantidade:</label> 
+Quantidade: <input type="number" name="Quantidade" id="txtquant">
+<input type="button" value="Adicionar" onclick="adicionar()">
+<div id="carrinho">
+
+</div>
+
+<input type="button" value="Finalizar" onclick="finalizar()">
+    
+<div id="relatorio">
+
+</div>
+</section>
+<footer>&copy; AJDEV </footer>
+<script src="script.js"></script>
+</body>
+</html>

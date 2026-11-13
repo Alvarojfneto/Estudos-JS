@@ -1,0 +1,90 @@
+/* 1. Reset básico e Fundo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9ecef; /* Cinza bem clarinho */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 2. Título do Sistema */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* 3. O "Cartão" do Sistema (Transformando a tag section) */
+section {
+    background-color: #ffffff;
+    max-width: 500px; /* Não deixa o sistema ficar esticado num monitor largo */
+    margin: 0 auto; /* Centraliza a caixa no meio da tela */
+    padding: 30px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombreado elegante */
+    text-align: left; /* Alinha o texto do form à esquerda */
+}
+
+/* 4. Estilizando as caixas de seleção e digitação */
+select, input[type="number"] {
+    width: 100%; /* Ocupa a linha toda do cartão */
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px; /* Dá espaço para o próximo elemento */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* 5. Os Botões de Ação */
+input[type="button"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+/* Diferenciando os botões por atributo de valor (O seletor pega o nome escrito no botão!) */
+input[value="Adicionar"] {
+    background-color: #3498db; /* Azul */
+}
+
+input[value="Adicionar"]:hover {
+    background-color: #2980b9;
+}
+
+input[value="Finalizar"] {
+    background-color: #27ae60; /* Verde */
+}
+
+input[value="Finalizar"]:hover {
+    background-color: #219150;
+}
+
+/* 6. As caixas de resultado (O carrinho visual e o recibo) */
+#carrinho {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #0c0c0c; /* Uma barrinha azul de estilo */
+    min-height: 50px;
+}
+
+#relatorio {
+    background-color: #f1f8e9; /* Verde bem clarinho */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #c5e1a5;
+    font-size: 16px;
+}
+
+/* 7. Rodapé */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+}
